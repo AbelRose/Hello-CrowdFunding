@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="crowdfunding-main" />
         <module name="crowdfunding-manager-impl" />
+        <module name="crowdfunding-manager-api" />
+        <module name="crowdfunding-main" />
         <module name="crowdfunding-common" />
         <module name="crowdfunding-bean" />
-        <module name="crowdfunding-parent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

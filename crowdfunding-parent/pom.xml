@@ -7,7 +7,7 @@
     <groupId>com.matrix.crowdfunding</groupId>
     <artifactId>crowdfunding-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>pom</packaging>
 
     <properties>
         <!-- 公共依赖 -->

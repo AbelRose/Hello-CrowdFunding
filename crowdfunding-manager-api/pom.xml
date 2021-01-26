@@ -4,13 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.matrix.crowdfunding</groupId>
     <artifactId>crowdfunding-manager-api</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>../crowdfunding-manager-impl</module>
-    </modules>
+    <description>后台管理系统,存放业务层接口和DAO层接口(jar)</description>
 
     <parent>
         <groupId>com.matrix.crowdfunding</groupId>
@@ -19,4 +14,16 @@
         <relativePath>../crowdfunding-parent/pom.xml</relativePath>
     </parent>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.matrix.crowdfunding</groupId>
+            <artifactId>crowdfunding-bean</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+    </dependencies>
 </project>

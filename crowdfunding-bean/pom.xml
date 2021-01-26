@@ -4,9 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.matrix.crowdfunding</groupId>
     <artifactId>crowdfunding-bean</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <description>存放所有模块的实体类(jar)</description>
 
     <parent>
         <groupId>com.matrix.crowdfunding</groupId>
@@ -14,6 +13,7 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>../crowdfunding-parent/pom.xml</relativePath>
     </parent>
+
 
     <dependencies>
         <!-- jackson -->
