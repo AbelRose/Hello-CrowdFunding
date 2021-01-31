@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">  <!-- 向控制台输出 以后也可以在文件中输出 -->
 		<encoder>
 			<pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
 		</encoder>
 	</appender>
 
-	<root level="DEBUG">
+	<root level="DEBUG"> <!-- DEBUG 级别 (开发DEBUG 生产ERROR) -->
 		<appender-ref ref="STDOUT" />
 	</root>
 
