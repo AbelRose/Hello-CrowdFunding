@@ -13,7 +13,7 @@ public class DispatcherController {
 
     Logger log = LoggerFactory.getLogger(DispatcherController.class);
 
-    @RequestMapping("/index")
+    @RequestMapping("/index")  // /index中的/杠 代表http://localhost:8080/crowdfunding_main_war/  逻辑路径
     public String index() {
         log.debug("跳转到系统的主页面...");
         return "index";

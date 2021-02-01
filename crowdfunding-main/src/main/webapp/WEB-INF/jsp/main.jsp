@@ -8,19 +8,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="${PATH}/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${PATH}/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${PATH}/static/css/main.css">
     <style>
         .tree li {
             list-style-type: none;
-            cursor:pointer;
+            cursor: pointer;
         }
+
         .tree-closed {
-            height : 40px;
+            height: 40px;
         }
+
         .tree-expanded {
-            height : auto;
+            height: auto;
         }
     </style>
 </head>
@@ -36,7 +38,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li style="padding-top:8px;">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default btn-success dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default btn-success dropdown-toggle"
+                                data-toggle="dropdown">
                             <i class="glyphicon glyphicon-user"></i> 张三 <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -64,11 +67,12 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <div class="tree">
                 <ul style="padding-left:0px;" class="list-group">
-                    <li class="list-group-item tree-closed" >
+                    <li class="list-group-item tree-closed">
                         <a href="main.html"><i class="glyphicon glyphicon-dashboard"></i> 控制面板</a>
                     </li>
                     <li class="list-group-item tree-closed">
-                        <span><i class="glyphicon glyphicon glyphicon-tasks"></i> 权限管理 <span class="badge" style="float:right">3</span></span>
+                        <span><i class="glyphicon glyphicon glyphicon-tasks"></i> 权限管理 <span class="badge"
+                                                                                             style="float:right">3</span></span>
                         <ul style="margin-top:10px;display:none;">
                             <li style="height:30px;">
                                 <a href="user.html"><i class="glyphicon glyphicon-user"></i> 用户维护</a>
@@ -77,7 +81,8 @@
                                 <a href="role.html"><i class="glyphicon glyphicon-king"></i> 角色维护</a>
                             </li>
                             <li style="height:30px;">
-                                <a href="permission.html" style="color:red;"><i class="glyphicon glyphicon-lock"></i> 许可维护</a>
+                                <a href="permission.html" style="color:red;"><i class="glyphicon glyphicon-lock"></i>
+                                    许可维护</a>
                             </li>
                             <li style="height:30px;">
                                 <a href="menu.html"><i class="glyphicon glyphicon-th-list"></i> 菜单维护</a>
@@ -85,7 +90,8 @@
                         </ul>
                     </li>
                     <li class="list-group-item tree-closed">
-                        <span><i class="glyphicon glyphicon-ok"></i> 业务审核 <span class="badge" style="float:right">3</span></span>
+                        <span><i class="glyphicon glyphicon-ok"></i> 业务审核 <span class="badge"
+                                                                                style="float:right">3</span></span>
                         <ul style="margin-top:10px;display:none;">
                             <li style="height:30px;">
                                 <a href="auth_cert.html"><i class="glyphicon glyphicon-check"></i> 实名认证审核</a>
@@ -124,7 +130,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="list-group-item tree-closed" >
+                    <li class="list-group-item tree-closed">
                         <a href="param.html"><i class="glyphicon glyphicon-list-alt"></i> 参数管理</a>
                     </li>
                 </ul>
@@ -135,22 +141,26 @@
 
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <img data-src="holder.js/200x200/auto/sky" class="img-responsive"
+                         alt="Generic placeholder thumbnail">
                     <h4>Label</h4>
                     <span class="text-muted">Something else</span>
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <img data-src="holder.js/200x200/auto/vine" class="img-responsive"
+                         alt="Generic placeholder thumbnail">
                     <h4>Label</h4>
                     <span class="text-muted">Something else</span>
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <img data-src="holder.js/200x200/auto/sky" class="img-responsive"
+                         alt="Generic placeholder thumbnail">
                     <h4>Label</h4>
                     <span class="text-muted">Something else</span>
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <img data-src="holder.js/200x200/auto/vine" class="img-responsive"
+                         alt="Generic placeholder thumbnail">
                     <h4>Label</h4>
                     <span class="text-muted">Something else</span>
                 </div>
@@ -158,15 +168,15 @@
         </div>
     </div>
 </div>
-<script src="static/jquery/jquery-2.1.1.min.js"></script>
-<script src="static/bootstrap/js/bootstrap.min.js"></script>
-<script src="static/script/docs.min.js"></script>
+<script src="${PATH}/static/jquery/jquery-2.1.1.min.js"></script>
+<script src="${PATH}/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="${PATH}/static/script/docs.min.js"></script>
 <script type="text/javascript">
     $(function () {
-        $(".list-group-item").click(function(){
-            if ( $(this).find("ul") ) {
+        $(".list-group-item").click(function () {
+            if ($(this).find("ul")) {
                 $(this).toggleClass("tree-closed");
-                if ( $(this).hasClass("tree-closed") ) {
+                if ($(this).hasClass("tree-closed")) {
                     $("ul", this).hide("fast");
                 } else {
                     $("ul", this).show("fast");
