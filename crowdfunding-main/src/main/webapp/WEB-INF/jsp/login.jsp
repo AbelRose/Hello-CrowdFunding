@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -8,8 +9,7 @@
     <meta name="description" content="">
     <meta name="keys" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="${PATH}/static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${PATH}/static/css/font-awesome.min.css">
+    <%@include file="/WEB-INF/jsp/common/css.jsp"%> <!-- 静态包含: 生成一个class  适合不总变的情况-->
     <link rel="stylesheet" href="${PATH}/static/css/login.css">
     <style>
 
@@ -28,12 +28,19 @@
 
     <form id="loginForm" class="form-signin" role="form" action="doLogin" method="post">  <!-- action="doLogin" 请求DispatcherController中的doLogin方法 -->
         <h2 class="form-signin-heading"><i class="glyphicon glyphicon-log-in"></i> 用户登录</h2>
-        <div class="form-group has-success has-feedback">
-            <input type="text" class="form-control" id="loginacct" name="loginacct" placeholder="请输入登录账号" autofocus> <!-- name="loginacct" 对应doLogin中的参数 -->
+        <!-- 登陆的信息显示出来 -->
+        <c:if test="${not empty message}"> <!-- 请求域中若不为空 取出来 -->
+            <div class="form-group has-success has-feedback">
+                ${message}
+            </div>
+        </c:if>
+        <div class="form-group has-success has-feedback"> <%-- value="${param.loginacct}" --%>
+            <input type="text" class="form-control" id="loginacct" name="loginacct" value="superadmin" placeholder="请输入登录账号" autofocus> <!-- name="loginacct" 对应doLogin中的参数-->
+            <%--    value="${param.loginacct}" 用于回显 用户名不丢 --%>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
         </div>
         <div class="form-group has-success has-feedback">
-            <input type="text" class="form-control" id="userpswd" name="userpswd" placeholder="请输入登录密码" style="margin-top:10px;">  <!-- name="userpswd" 对应doLogin中的参数 -->
+            <input type="password" class="form-control" id="userpswd" name="userpswd" value="123456" placeholder="请输入登录密码" style="margin-top:10px;">  <!-- name="userpswd" 对应doLogin中的参数 -->
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
 <%--        <div class="form-group has-success has-feedback">--%>
@@ -57,8 +64,7 @@
         <a class="btn btn-lg btn-success btn-block" onclick="dologin()" > 登录</a>
     </form>
 </div>
-<script src="${PATH}/static/jquery/jquery-2.1.1.min.js"></script>
-<script src="${PATH}/static/bootstrap/js/bootstrap.min.js"></script>
+<%@include file="/WEB-INF/jsp/common/js.jsp"%> <!-- 静态包含: 生成一个class  适合不总变的情况-->
 <script>
     function dologin() {
         // 用id选择器拿到登录的form id

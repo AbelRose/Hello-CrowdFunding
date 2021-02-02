@@ -7,6 +7,7 @@
 	</appender>
 
 	<root level="DEBUG"> <!-- DEBUG 级别 (开发DEBUG 生产ERROR) -->
+<!--	<root level="INFO"> &lt;!&ndash; DEBUG 级别 (开发DEBUG 生产ERROR) &ndash;&gt;-->
 		<appender-ref ref="STDOUT" />
 	</root>
 

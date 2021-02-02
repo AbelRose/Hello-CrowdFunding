@@ -9,9 +9,17 @@
     <meta name="author" content="">
     <!-- 前台路径 由游览器发起的路径 从部署环境下找 物理路径  这些资源最好在application创建时就加载-->
     <%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css">--%>
-    <link rel="stylesheet" href="${PATH}/static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${PATH}/static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="${PATH}/static/css/carousel.css">
+<%--    <link rel="stylesheet" href="${PATH}/static/bootstrap/css/bootstrap.min.css">--%>
+<%--    <link rel="stylesheet" href="${PATH}/static/css/font-awesome.min.css">--%>
+<%--    <link rel="stylesheet" href="${PATH}/static/css/carousel.css">--%>
+
+
+
+    <%@include file="/WEB-INF/jsp/common/css.jsp"%> <!-- 静态包含: 生成一个class  适合不总变的情况-->
+<%--    <jsp:include page="/WEB-INF/jsp/common/css.jsp"></jsp:include> <!-- 动态包含: 生成两个class  适合总变的情况-->--%>
+
+
+
     <style>
         h3 {
             font-weight: bold;
@@ -155,7 +163,8 @@
         }
 
         .newsList li {
-            background: url("../images/share/point.png") no-repeat 2px 14px;
+            /*background: url("../images/share/point.png") no-repeat 2px 14px;*/
+            background: url("${PATH}/images/share/point.png") no-repeat 2px 14px;
             padding-left: 10px;
             height: 30px;
             line-height: 30px;
@@ -862,35 +871,9 @@
             </div>
         </div>
     </div>
-
-    <!-- FOOTER -->
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-md-12 column">
-                <div id="footer">
-                    <div class="footerNav">
-                        <a rel="nofollow" href="http://www.atguigu.com">关于我们</a> | <a rel="nofollow"
-                                                                                      href="http://www.atguigu.com">服务条款</a>
-                        | <a rel="nofollow" href="http://www.atguigu.com">免责声明</a> | <a rel="nofollow"
-                                                                                        href="http://www.atguigu.com">网站地图</a>
-                        | <a rel="nofollow" href="http://www.atguigu.com">联系我们</a>
-                    </div>
-                    <div class="copyRight">
-                        Copyright ?2017-2017atguigu.com 版权所有
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+    <%@include file="/WEB-INF/jsp/common/foot.jsp"%> <!-- 静态包含: 生成一个class  适合不总变的情况-->
 </div><!-- /.container -->
-
-
-<script src="${PATH}/static/jquery/jquery-2.1.1.min.js"></script>
-<script src="${PATH}/static/bootstrap/js/bootstrap.min.js"></script>
-<script src="${PATH}/static/script/docs.min.js"></script>
-<script src="${PATH}/static/script/back-to-top.js"></script>
+<%@include file="/WEB-INF/jsp/common/js.jsp"%> <!-- 静态包含: 生成一个class  适合不总变的情况-->
 <script>
     $(".thumbnail img").css("cursor", "pointer");
     $(".thumbnail img").click(function () {
