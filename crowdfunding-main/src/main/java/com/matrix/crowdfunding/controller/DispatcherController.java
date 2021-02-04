@@ -1,7 +1,9 @@
 package com.matrix.crowdfunding.controller;
 
 import com.matrix.crowdfunding.bean.TAdmin;
+import com.matrix.crowdfunding.bean.TMenu;
 import com.matrix.crowdfunding.service.TAdminService;
+import com.matrix.crowdfunding.service.TMenuService;
 import com.matrix.crowdfunding.util.Const;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,6 +24,9 @@ import java.util.Map;
 public class DispatcherController {
 
     Logger log = LoggerFactory.getLogger(DispatcherController.class);
+
+    @Autowired
+    TMenuService menuService;
 
     // 将sevice注入
     @Autowired
@@ -49,8 +55,13 @@ public class DispatcherController {
     }
 
     @RequestMapping("/main")
-    public String main() {
+    public String main(HttpSession session) {
         log.debug("跳转后台系统的main页面...");
+
+        // 存放父菜单
+        List<TMenu> menuList  = menuService.listMenuAll();
+        session.setAttribute("menuList", menuList);  // 为了保存结钩将menuList放到session中
+
         return "main";
     }
 

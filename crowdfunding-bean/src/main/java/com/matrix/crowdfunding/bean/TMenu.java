@@ -1,5 +1,8 @@
 package com.matrix.crowdfunding.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TMenu {
     private Integer id;
 
@@ -10,6 +13,29 @@ public class TMenu {
     private String icon;
 
     private String url;
+
+    // 用于存放子菜单
+    private List<TMenu> children = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "TMenu{" +
+                "id=" + id +
+                ", pid=" + pid +
+                ", name='" + name + '\'' +
+                ", icon='" + icon + '\'' +
+                ", url='" + url + '\'' +
+                ", children=" + children +
+                '}';
+    }
+
+    public List<TMenu> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<TMenu> children) {
+        this.children = children;
+    }
 
     public Integer getId() {
         return id;

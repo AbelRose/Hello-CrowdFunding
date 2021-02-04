@@ -65,7 +65,7 @@
         </div>
     </div>
 </div>
-<%@include file="/WEB-INF/jsp/common/css.jsp"%> <!-- 静态包含: 生成一个class  适合不总变的情况-->
+<%@include file="/WEB-INF/jsp/common/js.jsp"%> <!-- 静态包含: 生成一个class  适合不总变的情况-->
 <script type="text/javascript">
     $(function () {
         $(".list-group-item").click(function () {
