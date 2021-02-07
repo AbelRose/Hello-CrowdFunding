@@ -1,5 +1,6 @@
 package com.matrix.crowdfunding.service;
 
+import com.github.pagehelper.PageInfo;
 import com.matrix.crowdfunding.bean.TAdmin;
 
 import java.util.Map;
@@ -10,4 +11,6 @@ import java.util.Map;
  */
 public interface TAdminService {
     TAdmin getTAdminByLogin(Map<String, Object> paramMap);
+    PageInfo<TAdmin> listAdminPage(Map<String, Object> paramMap);
+    void saveTAdmin(TAdmin admin);
 }
