@@ -85,4 +85,14 @@ public class TAdminServiceImpl implements TAdminService {
         admin.setCreatetime(AppDateUtils.getFormatTime());
         adminMapper.insertSelective(admin);  // 动态sql 有选择性的保存 有字段的就保存没有就不保存(比如密码和创建时间的属性 在数据库中是有字段的但是可以先不写到sql语句中 可以在外面赋值)
     }
+
+    @Override
+    public TAdmin getTAdminById(Integer id) {
+        return adminMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public void updateTAdmin(TAdmin admin) {
+        adminMapper.updateByPrimaryKeySelective(admin);  // 有选择的更新即可以只更新某几个字段 比如password和createtime就不需要更新
+    }
 }

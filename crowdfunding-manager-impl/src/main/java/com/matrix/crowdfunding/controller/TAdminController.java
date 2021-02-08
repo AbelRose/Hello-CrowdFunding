@@ -53,4 +53,17 @@ public class TAdminController {
         return "redirect:/admin/index?pageNum="+Integer.MAX_VALUE;  // 分页合理话 为了新增的在第一页显示
 
     }
+
+    @RequestMapping("/admin/toUpdate")
+    public String toUpdate(Integer id, Model model) {
+        TAdmin admin = adminService.getTAdminById(id);
+        model.addAttribute("admin", admin);  // Model model 是一个请求域 并放到主页面
+        return "admin/update";
+    }
+
+    @RequestMapping("/admin/doUpdate")
+    public String doUpdate(TAdmin admin) {
+        adminService.updateTAdmin(admin);
+        return "redirect:/admin/index";
+    }
 }
