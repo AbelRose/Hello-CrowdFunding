@@ -62,8 +62,15 @@ public class TAdminController {
     }
 
     @RequestMapping("/admin/doUpdate")
-    public String doUpdate(TAdmin admin) {
+    public String doUpdate(TAdmin admin, Integer pageNum) {
         adminService.updateTAdmin(admin);
-        return "redirect:/admin/index";
+        return "redirect:/admin/index?pageNum=" + pageNum;  // 还是重定向到当前的页码
+    }
+
+
+    @RequestMapping("/admin/doDelete")
+    public String doDelete(Integer id, Integer pageNum) {
+        adminService.deleteTAdmin(id);
+        return "redirect:/admin/index?pageNum=" + pageNum;
     }
 }

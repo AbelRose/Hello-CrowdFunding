@@ -41,6 +41,8 @@
                             <label for="loginacct">登陆账号</label>
 <%--                        需要新加一个隐含域 为了拿到admin的ID--%>
                             <input type="hidden" name="id" value="${admin.id}">
+
+                            <input type="hidden" name="pageNum" value="${param.pageNum}">
                             <input type="text" class="form-control" id="loginacct" name="loginacct" value="${admin.loginacct}" placeholder="请输入登陆账号">
 <%--                        为了能够回显 在请求域之中是可以拿到的 value="${admin.loginacct}"--%>
                         </div>

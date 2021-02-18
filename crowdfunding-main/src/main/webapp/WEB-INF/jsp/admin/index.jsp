@@ -82,11 +82,15 @@
                                 <td>
                                     <button type="button" class="btn btn-success btn-xs"><i
                                             class=" glyphicon glyphicon-check"></i></button>
-                                    <button type="button" class="btn btn-primary btn-xs" onclick="window.location.href='${PATH}/admin/toUpdate/id=${admin.id}'"><i
+                                    <button type="button" class="btn btn-primary btn-xs" onclick="window.location.href='${PATH}/admin/toUpdate?pageNum=${page.pageNum}&id=${admin.id}"><i
                                             class=" glyphicon glyphicon-pencil"></i></button>
 <%--                                    onclick 按钮的事件--%>
-                                    <button type="button" class="btn btn-danger btn-xs"><i
+<%--                                    <button type="button" class="btn btn-danger btn-xs" onclick="window.location.href='${PATH}/admin/doDelete?pageNum=${page.pageNum}&id=${admin.id}'"><i--%>
+<%--                                            class=" glyphicon glyphicon-remove"></i></button>--%>
+                                    <%--使用弹层组件--%>
+                                    <button type="button" adminId="${admin.id}" class="deleteBtnClass btn btn-danger btn-xs"><i
                                             class=" glyphicon glyphicon-remove"></i></button>
+                                    <%--adminId="${admin.id}" 把值挂在自定义的属性上 触发事件的时候取自定义的属性的值就可以--%>
                                 </td>
                             </tr>
                             </c:forEach>
@@ -133,7 +137,6 @@
                                     </ul>
                                 </td>
                             </tr>
-
                             </tfoot>
                         </table>
                     </div>
@@ -156,6 +159,22 @@
             }
         });
     });
+
+    // 把所有的这样的按钮都拿到
+    ${".deleteBtnClass"}.click(function () {
+
+        var id = $(this).attr("adminId");
+        //询问框
+        layer.confirm('您是否确定删除该条数据？', {
+            btn: ['确定','取消'] //按钮
+        }, function(index){
+            window.location.href="window.location.href='${PATH}/admin/doDelete?pageNum=${page.pageNum}&id="+id;
+            layer.close(index);
+        }, function(index){
+            layer.close(index);
+        });
+    });
+
 </script>
 </body>
 </html>

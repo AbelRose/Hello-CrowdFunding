@@ -10,9 +10,17 @@ import java.util.Map;
  * @Date 2/2/2021 19:47
  */
 public interface TAdminService {
+
     TAdmin getTAdminByLogin(Map<String, Object> paramMap);
+
     PageInfo<TAdmin> listAdminPage(Map<String, Object> paramMap);
+
     void saveTAdmin(TAdmin admin);
+
     TAdmin getTAdminById(Integer id);
+
     void updateTAdmin(TAdmin admin);
+
+    void deleteTAdmin(Integer id);
+
 }

@@ -95,4 +95,9 @@ public class TAdminServiceImpl implements TAdminService {
     public void updateTAdmin(TAdmin admin) {
         adminMapper.updateByPrimaryKeySelective(admin);  // 有选择的更新即可以只更新某几个字段 比如password和createtime就不需要更新
     }
+
+    @Override
+    public void deleteTAdmin(Integer id) {
+        adminMapper.deleteByPrimaryKey(id);
+    }
 }
