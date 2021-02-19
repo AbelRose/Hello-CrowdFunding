@@ -12,7 +12,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -71,6 +73,20 @@ public class TAdminController {
     @RequestMapping("/admin/doDelete")
     public String doDelete(Integer id, Integer pageNum) {
         adminService.deleteTAdmin(id);
+        return "redirect:/admin/index?pageNum=" + pageNum;
+    }
+
+    // 批量删除
+    @RequestMapping("/admin/doDeleteBatch")
+    public String doDeleteBatch(String ids, Integer pageNum) {  // ids = "1, 2, 3, 4, 5" 按照逗号分解
+        List<Integer> idList = new ArrayList<>();
+        // 分解
+        String[] split = ids.split(",");
+        for (String idStr : split) {
+            int id = Integer.parseInt(idStr);
+            idList.add(id);
+        }
+        adminService.deleteBatch(idList);
         return "redirect:/admin/index?pageNum=" + pageNum;
     }
 }

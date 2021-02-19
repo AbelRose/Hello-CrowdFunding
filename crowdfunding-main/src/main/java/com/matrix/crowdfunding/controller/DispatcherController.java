@@ -58,10 +58,18 @@ public class DispatcherController {
     public String main(HttpSession session) {
         log.debug("跳转后台系统的main页面...");
 
+        // 如果没有session 那么要去重新登陆
+        if (session == null) {
+            return "redirect:/login";
+        }
         // 存放父菜单
-        List<TMenu> menuList  = menuService.listMenuAll();
-        session.setAttribute("menuList", menuList);  // 为了保存结钩将menuList放到session中
-
+        // 优化 -> 不必每次都从数据库中查找 如果session域中有的话直接从session域中拿数据
+        List<TMenu> menuList  = (List<TMenu>) session.getAttribute("menuList");
+        if (menuList == null) { // 若session域中没有
+            menuList = menuService.listMenuAll();
+            session.setAttribute("menuList", menuList);
+        }
+        // session 域中有了 就直接去main页面
         return "main";
     }
 

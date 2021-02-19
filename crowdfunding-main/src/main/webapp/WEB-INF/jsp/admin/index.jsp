@@ -40,17 +40,16 @@
                     <h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-inline" role="form" style="float:left;">
+                    <form id="queryForm" class="form-inline" role="form" style="float:left;"action="${PATH}/admin/index" method="post">
                         <div class="form-group has-feedback">
                             <div class="input-group">
                                 <div class="input-group-addon">查询条件</div>
-                                <input class="form-control has-success" type="text" placeholder="请输入查询条件">
+                                <input class="form-control has-success" name="condition" value="${param.condition}" type="text" placeholder="请输入查询条件">
                             </div>
                         </div>
-                        <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 查询
-                        </button>
+                        <button type="button" class="btn btn-warning" onclick="$('#queryForm').submit()"><i class="glyphicon glyphicon-search"></i> 查询</button>
                     </form>
-                    <button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i
+                    <button id="deleteBatchBtn" type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i
                             class=" glyphicon glyphicon-remove"></i> 删除
                     </button>
                     <button type="button" class="btn btn-primary" style="float:right;"
@@ -63,7 +62,7 @@
                             <thead>
                             <tr>
                                 <th width="30">#</th>
-                                <th width="30"><input type="checkbox"></th>
+                                <th width="30"><input id="selectAll" type="checkbox"></th>
                                 <th>账号</th>
                                 <th>名称</th>
                                 <th>邮箱地址</th>
@@ -75,7 +74,7 @@
                                 <%--                            var是page.list赋值的变量   ${status.count}是迭代的序号 --%>
                             <tr>
                                 <td>${status.count}</td>
-                                <td><input type="checkbox"></td>
+                                <td><input type="checkbox" adminId="${admin.id}"></td>
                                 <td>${admin.loginacct}</td>
                                 <td>${admin.username}</td>
                                 <td>${admin.email}</td>
@@ -84,13 +83,13 @@
                                             class=" glyphicon glyphicon-check"></i></button>
                                     <button type="button" class="btn btn-primary btn-xs" onclick="window.location.href='${PATH}/admin/toUpdate?pageNum=${page.pageNum}&id=${admin.id}"><i
                                             class=" glyphicon glyphicon-pencil"></i></button>
-<%--                                    onclick 按钮的事件--%>
-<%--                                    <button type="button" class="btn btn-danger btn-xs" onclick="window.location.href='${PATH}/admin/doDelete?pageNum=${page.pageNum}&id=${admin.id}'"><i--%>
-<%--                                            class=" glyphicon glyphicon-remove"></i></button>--%>
-                                    <%--使用弹层组件--%>
+                                        <%--                                    onclick 按钮的事件--%>
+                                        <%--                                    <button type="button" class="btn btn-danger btn-xs" onclick="window.location.href='${PATH}/admin/doDelete?pageNum=${page.pageNum}&id=${admin.id}'"><i--%>
+                                        <%--                                            class=" glyphicon glyphicon-remove"></i></button>--%>
+                                        <%--使用弹层组件--%>
                                     <button type="button" adminId="${admin.id}" class="deleteBtnClass btn btn-danger btn-xs"><i
                                             class=" glyphicon glyphicon-remove"></i></button>
-                                    <%--adminId="${admin.id}" 把值挂在自定义的属性上 触发事件的时候取自定义的属性的值就可以--%>
+                                        <%--adminId="${admin.id}" 把值挂在自定义的属性上 触发事件的时候取自定义的属性的值就可以--%>
                                 </td>
                             </tr>
                             </c:forEach>
@@ -133,7 +132,6 @@
                                                 <a href="${PATH}/admin/index?condition=${param.condition}&pageNum=${page.pageNum+1}">下一页</a>
                                             </li>
                                         </c:if>
-
                                     </ul>
                                 </td>
                             </tr>
@@ -161,7 +159,7 @@
     });
 
     // 把所有的这样的按钮都拿到
-    ${".deleteBtnClass"}.click(function () {
+    $(".deleteBtnClass").click(function () {
 
         var id = $(this).attr("adminId");
         //询问框
@@ -174,6 +172,54 @@
             layer.close(index);
         });
     });
+
+    // 设置全选框
+    $("#selectAll").click(function () {
+        // $("tbody input[type='checkbox']").attr("checked", this.checked());  attr用来获取自定的属性 但是有bug
+        $("tbody input[type='checkbox']").prop("checked", this.checked);
+    });
+
+    // 批量删除 deleteBatchBtn
+    $("#deleteBatchBtn").click(function () {
+        var checkedBoxList = $("tbody input[type='checkbox']:checked")
+
+        if (checkedBoxList.length == 0) {
+            layer.msg("请选中在删除吧!");
+            return false;
+        }
+
+        // 传给后台
+        // var ids = '1, 2, 3, 4, 5';
+        <%--var ids = '';--%>
+        <%--$.each(checkedBoxList, function (i, e) {--%>
+        <%--    var adminId = ${e}.attr("adminId");  // 获取自定义属性--%>
+        <%--    if (i != 0) {--%>
+        <%--        ids += ',';--%>
+        <%--    }--%>
+        <%--    ids += e;--%>
+        <%--})--%>
+
+
+        var ids = '';
+        var array = new Array();
+        $.each(checkedBoxList, function (i, e) {
+            var adminId = $(e).attr("adminId");  // 获取自定义属性
+            array.push(adminId);
+        });
+        ids = array.join(",");
+        //询问框
+        layer.confirm('您是否确定删除这些数据？', {
+            btn: ['确定','取消'] //按钮
+        }, function(index){
+            // 传给后台
+            window.location.href="${PATH}/admin/doDeleteBatch?pageNum=${page.pageNum}&ids="+ids;
+            layer.close(index);
+        }, function(index){
+            layer.close(index);
+        });
+    });
+
+
 
 </script>
 </body>

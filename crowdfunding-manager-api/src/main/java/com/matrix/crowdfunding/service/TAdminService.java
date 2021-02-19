@@ -3,6 +3,7 @@ package com.matrix.crowdfunding.service;
 import com.github.pagehelper.PageInfo;
 import com.matrix.crowdfunding.bean.TAdmin;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,4 +24,5 @@ public interface TAdminService {
 
     void deleteTAdmin(Integer id);
 
+    void deleteBatch(List<Integer> idList);
 }
