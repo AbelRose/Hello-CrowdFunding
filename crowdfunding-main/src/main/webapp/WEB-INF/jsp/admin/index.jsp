@@ -45,9 +45,11 @@
                             <div class="input-group">
                                 <div class="input-group-addon">查询条件</div>
                                 <input class="form-control has-success" name="condition" value="${param.condition}" type="text" placeholder="请输入查询条件">
+<%--                            为了能够回显到输入框中 value="${param.condition}--%>
                             </div>
                         </div>
                         <button type="button" class="btn btn-warning" onclick="$('#queryForm').submit()"><i class="glyphicon glyphicon-search"></i> 查询</button>
+<%--                        onclick 是增加事件  $('#queryForm'). 把表单拿到  --%>
                     </form>
                     <button id="deleteBatchBtn" type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i
                             class=" glyphicon glyphicon-remove"></i> 删除
@@ -118,6 +120,7 @@
                                             <c:if test="${num != page.pageNum }">
                                                 <li>
                                                     <a href="${PATH}/admin/index?condition=${param.condition}&pageNum=${num}">${num}</a>
+<%--                                                 回显  condition=${param.condition} 为了能够在每一页中都根据查询的条件显示出来--%>
                                                 </li>
                                             </c:if>
                                         </c:forEach>

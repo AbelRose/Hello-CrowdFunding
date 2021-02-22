@@ -32,11 +32,17 @@ public class TAdminController {
 
     @RequestMapping("/admin/index")
     public String index(@RequestParam(value = "pageNum", required = false, defaultValue = "1") Integer pageNum,
-                        @RequestParam(value = "pageSize", required = false, defaultValue = "3")Integer pageSize,
-                        Model model){  // @RequestParam value 是后面的变量名   Model model 是请求域(因为页面不一样所以放到session域中是无意义的)
+                        @RequestParam(value = "pageSize", required = false, defaultValue = "3") Integer pageSize,
+                        Model model,
+                        @RequestParam(value = "condition", required = false, defaultValue = "") String condition){  // @RequestParam value 是后面的变量名   Model model 是请求域(因为页面不一样所以放到session域中是无意义的)  condition 是模糊查询只是多加了一个where而已 都写在一个接口中
+
+        log.debug("pageNum={}", pageNum);
+        log.debug("pageSize={}", pageSize);
+        log.debug("condition={}", condition);
 
         PageHelper.startPage(pageNum, pageSize);  // 线程绑定 分页的信息
         Map<String, Object> paramMap = new HashMap<>(); // 封装参数用的
+        paramMap.put("condition", condition); // 把查询条件传进去
         PageInfo<TAdmin> page = adminService.listAdminPage(paramMap);  // 分页查询
         model.addAttribute("page", page);  // 放到请求域中
         return "admin/index";

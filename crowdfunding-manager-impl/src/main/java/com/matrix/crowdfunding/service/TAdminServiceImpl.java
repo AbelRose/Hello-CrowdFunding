@@ -27,8 +27,8 @@ public class TAdminServiceImpl implements TAdminService {
 
     @Override
     public TAdmin getTAdminByLogin(Map<String, Object> paramMap) {
-        //1. 密码加密
 
+        //1. 密码加密
         //2. 查询用户
         String loginacct  = (String)paramMap.get("loginacct");
         String userpswd  = (String)paramMap.get("userpswd");
@@ -70,6 +70,21 @@ public class TAdminServiceImpl implements TAdminService {
     @Override
     public PageInfo<TAdmin> listAdminPage(Map<String, Object> paramMap) {
         TAdminExample example = new TAdminExample();
+        String condition = (String) paramMap.get("condition");
+        // 模糊查询
+        if (!"".equals(condition)) {
+            // 第一个条件
+            example.createCriteria().andLoginacctLike("%" + condition + "%");// createCriteria() 表示创建条件
+            // 第二个条件
+            TAdminExample.Criteria criteria2 = example.createCriteria();
+            criteria2.andUsernameLike("%" + condition + "%");
+            // 第三个条件
+            TAdminExample.Criteria criteria3 = example.createCriteria();
+            criteria3.andEmailLike("%" + condition + "%");
+            // 三个条件是或的关系
+            example.or(criteria2);
+            example.or(criteria3);
+        }
         // 为了能够使新增的数据在第一页显示 于是用到了倒叙排序
 //        example.setOrderByClause("createtime desc");
         List<TAdmin> list =  adminMapper.selectByExample(example);  // null代表所有 查询所有
