@@ -11,18 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405c9bbe-0a78-4b45-9d3b-a39c12065970" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/service/TRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/admin/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-manager-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-manager-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-manager-impl-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-manager-impl-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/mapper/TAdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/mapper/TAdminMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TAdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TAdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/mybatis/mapper/TAdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/mybatis/mapper/TAdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/service/TRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/service/TRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/crowdfunding-common/target/" />
@@ -56,11 +49,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="483">
+              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/service/TRoleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state relative-caret-position="198">
+              <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -80,37 +73,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="153">
+              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#504#505#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="82" column="59" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/admin/index.jsp">
+        <entry file="file://$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="148" column="10" lean-forward="true" selection-start-line="148" selection-end-line="149" />
+            <state relative-caret-position="175">
+              <caret line="127" column="42" selection-start-line="127" selection-start-column="34" selection-end-line="127" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -218,10 +196,11 @@
         <option value="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TAdminController.java" />
         <option value="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TAdminServiceImpl.java" />
         <option value="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/admin/index.jsp" />
-        <option value="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.xhtml" />
-        <option value="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java" />
         <option value="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp" />
+        <option value="$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/service/TRoleService.java" />
+        <option value="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java" />
+        <option value="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -257,9 +236,10 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1905" />
-    <option name="width" value="1948" />
-    <option name="height" value="2075" />
+    <option name="x" value="-15" />
+    <option name="y" value="-15" />
+    <option name="width" value="3875" />
+    <option name="height" value="2095" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -270,263 +250,7 @@
       <autoscrollFromSource ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="matrix" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hello-CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hello-CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -705,7 +429,9 @@
       <workItem from="1613739255306" duration="6073000" />
       <workItem from="1613885419931" duration="1781000" />
       <workItem from="1613916555846" duration="6000" />
-      <workItem from="1613998479606" duration="5040000" />
+      <workItem from="1613998479606" duration="5161000" />
+      <workItem from="1614005276670" duration="613000" />
+      <workItem from="1614090483583" duration="2690000" />
     </task>
     <task id="LOCAL-00001" summary="20200125">
       <created>1611673730161</created>
@@ -798,11 +524,18 @@
       <option name="project" value="LOCAL" />
       <updated>1613745292274</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="20200222">
+      <created>1614005014747</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614005014748</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74876000" />
+    <option name="totallyTimeSpent" value="78300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -819,7 +552,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22065064" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.37906647" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2956153" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.19377652" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -905,7 +638,8 @@
     <MESSAGE value="20200208" />
     <MESSAGE value="20200218" />
     <MESSAGE value="20200219" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200219" />
+    <MESSAGE value="20200222" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200222" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/error/error.jsp">
@@ -1243,42 +977,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.xhtml" />
     <entry file="file://$PROJECT_DIR$/crowdfunding-bean/src/main/java/com/matrix/crowdfunding/bean/TRole.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/service/TRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1287,20 +990,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/admin/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="148" column="10" lean-forward="true" selection-start-line="148" selection-end-line="149" />
+        <state relative-caret-position="-1005">
+          <caret line="148" column="10" selection-start-line="148" selection-end-line="149" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="82" column="59" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
+        <state relative-caret-position="175">
+          <caret line="127" column="42" selection-start-line="127" selection-start-column="34" selection-end-line="127" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/service/TRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

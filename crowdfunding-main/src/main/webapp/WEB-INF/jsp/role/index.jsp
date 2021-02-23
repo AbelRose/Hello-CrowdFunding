@@ -68,7 +68,7 @@
                             </thead>
                             <tbody>
 <%--                            同步请求--%>
-                                数据正在加载中...
+<%--                                数据正在加载中...--%>
                             </tbody>
                             <tfoot>
                             <tr>
@@ -98,6 +98,7 @@
 
 <script type="text/javascript">
     $(function () {
+        // 页面加载完事件的处理
         $(".list-group-item").click(function () {
             if ($(this).find("ul")) {
                 $(this).toggleClass("tree-closed");
@@ -108,11 +109,56 @@
                 }
             }
         });
+        initData(1);  // 将第一页的数据进行初始化
     });
 
-    $("tbody .btn-success").click(function () {
-        window.location.href = "assignPermission.html";
-    });
+    function initData(pageNum) {
+        //1. 发起ajax请求 获取分页数据
+
+        var json = {
+            pageNum:1,
+            pageSize:10
+        };
+
+        var index = -1;
+
+        $.ajax(
+            {
+                type:'post',
+                url:"${PATH}/role/loadData",
+                data:json,
+                beforeSend:function () {
+                    // 进行表单数据校验
+                    index = layer.load(0, {time:10*1000});
+                    return true;
+                },
+                success:function(result) {
+                    console.log(result); // result就是PageInfo
+                    layer.close(index);
+
+                    initShow(result);  // 声明到函数外部
+                    initNavg(result);  // 声明到函数外部
+                }
+            }
+        );
+    }
+
+
+    //2. 展示数据
+    function initShow(result) {
+        alert("initShow = " + result);
+    }
+
+    //3. 展示分页条
+    function initNavg(result) {
+        alert("initNavg = " + result);
+
+    }
+
+
+
+
+
 </script>
 </body>
 </html>
