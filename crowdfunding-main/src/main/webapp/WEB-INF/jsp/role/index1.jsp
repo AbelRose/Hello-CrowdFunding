@@ -42,10 +42,10 @@
                         <div class="form-group has-feedback">
                             <div class="input-group">
                                 <div class="input-group-addon">查询条件</div>
-                                <input id="condition" class="form-control has-success" type="text" placeholder="请输入查询条件">
+                                <input class="form-control has-success" type="text" placeholder="请输入查询条件">
                             </div>
                         </div>
-                        <button id="queryBtn" type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i>  查询
+                        <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i>  查询
                         </button>
                     </form>
                     <button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i
@@ -203,18 +203,6 @@
             $('.pagination').append($('<li><a onclick="initData('+(result.pageNum+1)+')">下一页</a></li>'));
         }
     }
-
-    //======分页查询结束=========
-    $("#queryBtn").click(function(){
-        var condition = $("#condition").val();
-        json.condition = condition;
-        initData(1);
-    });
-
-
-
-
-
 
 </script>
 </body>

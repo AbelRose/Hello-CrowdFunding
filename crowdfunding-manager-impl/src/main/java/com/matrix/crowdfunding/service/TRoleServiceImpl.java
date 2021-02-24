@@ -2,9 +2,11 @@ package com.matrix.crowdfunding.service;
 
 import com.github.pagehelper.PageInfo;
 import com.matrix.crowdfunding.bean.TRole;
+import com.matrix.crowdfunding.bean.TRoleExample;
 import com.matrix.crowdfunding.mapper.TRoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +24,18 @@ public class TRoleServiceImpl implements TRoleService {
 
     @Override
     public PageInfo<TRole> listRolePage(HashMap<String, Object> paramMap) {
-        List<TRole> list = roleMapper.selectByExample(null);
+
+        String condition = (String) paramMap.get("condition");
+
+        List<TRole> list = null;
+
+        if (StringUtils.isEmpty(condition)) {
+            list = roleMapper.selectByExample(null);  // 如果是空 查询所有
+        } else { // 如果有条件
+            TRoleExample example = new TRoleExample();
+            example.createCriteria().andNameLike("%" + condition + "%");
+            list = roleMapper.selectByExample(example);
+        }
         PageInfo<TRole> page = new PageInfo<>(list, 5);
         return page;
     }

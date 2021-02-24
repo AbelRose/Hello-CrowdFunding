@@ -41,11 +41,12 @@ public class TRoleController {
     @ResponseBody
     @RequestMapping("/role/loadData")  // 路径和数据库中的是一样的
     public PageInfo<TRole> loadData(@RequestParam(value = "pageNum", required = false, defaultValue = "1") Integer pageNum,
-                                    @RequestParam(value = "pageSize", required = false, defaultValue = "2") Integer pageSize) {
+                                    @RequestParam(value = "pageSize", required = false, defaultValue = "2") Integer pageSize,
+                                    @RequestParam(value = "condition", required = false, defaultValue = "") String condition) {
         PageHelper.startPage(pageNum, pageSize);
         // 因为参数还不确定 所以惨书部分用一个map去映射
         HashMap<String, Object> paramMap = new HashMap<>();
-//        paramMap.put();
+        paramMap.put("condition", condition);  // 有条件的时候
         PageInfo<TRole> page = roleService.listRolePage(paramMap);
 //        return page;  // 不用做异步解析
         //@ResponseBody注解 不用放在session请求域和作用域中 直接以一个json串返回了   不加的话需要做视图解析:拼前缀和后缀
