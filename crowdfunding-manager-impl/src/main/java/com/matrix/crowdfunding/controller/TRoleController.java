@@ -27,6 +27,13 @@ public class TRoleController {
         return "role/index";  // 拼前缀和后缀
     }
 
+    @ResponseBody
+    @RequestMapping("/role/doAdd")  // 路径和数据库中的是一样的
+    public String doAdd(TRole role) {
+        roleService.saveTRole(role);
+        return "ok";  // 拼前缀和后缀
+    }
+
     /**
      * @ResponseBody 注解 -> 启用了消息转换器
      * 1. 如果返回结果为对象（Entity Class,List,Map..）类型：启用这个转换器->MappingJackson2HttpMessageConverter

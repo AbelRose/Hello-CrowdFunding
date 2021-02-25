@@ -11,4 +11,6 @@ import java.util.HashMap;
  */
 public interface TRoleService {
     PageInfo<TRole> listRolePage(HashMap<String, Object> paramMap);
+
+    void saveTRole(TRole role);
 }

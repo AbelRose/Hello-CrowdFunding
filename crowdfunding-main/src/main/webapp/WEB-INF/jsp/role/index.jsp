@@ -51,8 +51,7 @@
                     <button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i
                             class=" glyphicon glyphicon-remove"></i> 删除
                     </button>
-                    <button type="button" class="btn btn-primary" style="float:right;"
-                            onclick="window.location.href='form.html'"><i class="glyphicon glyphicon-plus"></i> 新增
+                    <button id="addBtn" type="button" class="btn btn-primary" style="float:right;"><i class="glyphicon glyphicon-plus"></i> 新增
                     </button>
                     <br>
                     <hr style="clear:both;">
@@ -93,6 +92,55 @@
         </div>
     </div>
 </div>
+
+
+<!-- 添加数据 模态框 -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加角色</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">角色名称</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="请输入角色名称">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="saveBtn" type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 修改数据 模态框 -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">修改角色</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">角色名称</label>
+                    <input type="hidden" name="id">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="请输入角色名称">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="updateBtn" type="button" class="btn btn-primary">修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <%@include file="/WEB-INF/jsp/common/js.jsp" %> <!-- 静态包含: 生成一个class  适合不总变的情况-->
 
@@ -211,6 +259,119 @@
         initData(1);
     });
 
+    //===添加 开始=====
+
+    $("#addBtn").click(function(){
+        $("#addModal").modal({
+            show:true,
+            backdrop:'static',
+            keyboard:false
+        });
+    });
+
+
+    $("#saveBtn").click(function(){
+        var name = $("#addModal input[name='name']").val();
+
+        $.ajax({
+            type:"post",
+            url:"${PATH}/role/doAdd",
+            data:{
+                name:name
+            },
+            beforeSend:function(){
+                return true ;
+            },
+            success:function(result){
+                if("ok"==result){
+                    layer.msg("保存成功",{time:1000},function(){
+                        $("#addModal").modal('hide');
+                        $("#addModal input[name='name']").val("");  // 将模态框中的值清除
+                        initData(1); //添加后初始化第一页，倒序排序。
+                    });
+                }else{
+                    layer.msg("保存失败");
+                }
+            }
+        });
+    });
+
+    //===添加 结束=======
+
+
+    //===修改 开始=======
+    /*
+    $(".updateClass").click(function(){
+        alert("update");
+    });
+     */
+    $('tbody').on('click','.updateClass',function(){
+        //var roleId = this.roleId ;// this DOM对象， dom对象不能获取自定义属性。
+        var roleId = $(this).attr("roleId");
+
+        $.get("${PATH}/role/getRoleById",{id:roleId},function(result){
+            console.log(result);
+
+            $("#updateModal").modal({
+                show:true,
+                backdrop:'static',
+                keyboard:false
+            });
+
+            $("#updateModal input[name='name']").val(result.name);
+            $("#updateModal input[name='id']").val(result.id);
+        });
+
+
+
+    });
+
+
+    $("#updateBtn").click(function(){
+        var name = $("#updateModal input[name='name']").val();
+        var id = $("#updateModal input[name='id']").val();
+
+        $.post("${PATH}/role/doUpdate",{id:id,name:name},function(result){
+            if("ok"==result){
+                layer.msg("修改成功",{time:1000},function(){
+                    $("#updateModal").modal('hide');
+                    initData(json.pageNum); //初始化当前页
+                });
+            }else{
+                layer.msg("修改失败");
+            }
+        });
+    });
+
+
+    //===修改 结束==============================================================
+
+
+
+    //===删除 开始==============================================================
+    $("tbody").on('click','.deleteClass',function(){
+        var id = $(this).attr("roleId");
+
+        layer.confirm("您确定要删除吗？",{btn:['确定','取消']},function(index){
+
+            $.post("${PATH}/role/doDelete",{id:id},function(result){
+                if("ok"==result){
+                    layer.msg("删除成功",{time:1000},function(){
+                        initData(json.pageNum); //初始化当前页
+                    });
+                }else{
+                    layer.msg("删除失败");
+                }
+            });
+
+            layer.close(index);
+        },function(index){
+            layer.close(index);
+        });
+
+    });
+
+    //===删除 结束==============================================================
 
 
 
