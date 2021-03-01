@@ -42,16 +42,19 @@
                         <div class="form-group has-feedback">
                             <div class="input-group">
                                 <div class="input-group-addon">查询条件</div>
-                                <input id="condition" class="form-control has-success" type="text" placeholder="请输入查询条件">
+                                <input id="condition" class="form-control has-success" type="text"
+                                       placeholder="请输入查询条件">
                             </div>
                         </div>
-                        <button id="queryBtn" type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i>  查询
+                        <button id="queryBtn" type="button" class="btn btn-warning"><i
+                                class="glyphicon glyphicon-search"></i> 查询
                         </button>
                     </form>
                     <button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i
                             class=" glyphicon glyphicon-remove"></i> 删除
                     </button>
-                    <button id="addBtn" type="button" class="btn btn-primary" style="float:right;"><i class="glyphicon glyphicon-plus"></i> 新增
+                    <button id="addBtn" type="button" class="btn btn-primary" style="float:right;"><i
+                            class="glyphicon glyphicon-plus"></i> 新增
                     </button>
                     <br>
                     <hr style="clear:both;">
@@ -66,8 +69,8 @@
                             </tr>
                             </thead>
                             <tbody>
-<%--                            同步请求--%>
-<%--                                数据正在加载中...--%>
+                            <%--                            同步请求--%>
+                            <%--                                数据正在加载中...--%>
                             </tbody>
                             <tfoot>
                             <tr>
@@ -99,7 +102,8 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
                 <h4 class="modal-title" id="myModalLabel">添加角色</h4>
             </div>
             <div class="modal-body">
@@ -122,7 +126,8 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
                 <h4 class="modal-title" id="myModalLabel">修改角色</h4>
             </div>
             <div class="modal-body">
@@ -139,7 +144,6 @@
         </div>
     </div>
 </div>
-
 
 
 <%@include file="/WEB-INF/jsp/common/js.jsp" %> <!-- 静态包含: 生成一个class  适合不总变的情况-->
@@ -161,8 +165,8 @@
     });
 
     var json = {
-        pageNum:1,
-        pageSize:2
+        pageNum: 1,
+        pageSize: 2
     };
 
     function initData(pageNum) {
@@ -174,15 +178,15 @@
 
         $.ajax(
             {
-                type:'post',
-                url:"${PATH}/role/loadData",
-                data:json,
-                beforeSend:function () {
+                type: 'post',
+                url: "${PATH}/role/loadData",
+                data: json,
+                beforeSend: function () {
                     // 进行表单数据校验
-                    index = layer.load(0, {time:10*1000});
+                    index = layer.load(0, {time: 10 * 1000});
                     return true;
                 },
-                success:function(result) {
+                success: function (result) {
                     console.log(result); // result就是PageInfo
                     layer.close(index);
 
@@ -202,17 +206,17 @@
 
         var list = result.list;
 
-        $.each(list,function(i,e){
+        $.each(list, function (i, e) {
             var tr = $('<tr></tr>');
 
-            tr.append('<td>'+(i+1)+'</td>');
+            tr.append('<td>' + (i + 1) + '</td>');
             tr.append('<td><input type="checkbox"></td>');
-            tr.append('<td>'+e.name+'</td>');
+            tr.append('<td>' + e.name + '</td>');
 
             var td = $('<td></td>');
             td.append('<button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>');
-            td.append('<button type="button" roleId="'+e.id+'" class="updateClass btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>');
-            td.append('<button type="button" roleId="'+e.id+'" class="deleteClass btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>');
+            td.append('<button type="button" roleId="' + e.id + '" class="updateClass btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>');
+            td.append('<button type="button" roleId="' + e.id + '" class="deleteClass btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>');
 
             tr.append(td);
 
@@ -228,76 +232,72 @@
 
         var navigatepageNums = result.navigatepageNums;
 
-        if(result.isFirstPage){
+        if (result.isFirstPage) {
             $('.pagination').append($('<li class="disabled"><a href="#">上一页</a></li>'));
-        }else{
-            $('.pagination').append($('<li><a onclick="initData('+(result.pageNum-1)+')">上一页</a></li>'));
+        } else {
+            $('.pagination').append($('<li><a onclick="initData(' + (result.pageNum - 1) + ')">上一页</a></li>'));
         }
 
 
-        $.each(navigatepageNums,function(i,num){
+        $.each(navigatepageNums, function (i, num) {
 
-            if(num == result.pageNum){
-                $('.pagination').append($('<li class="active"><a href="#">'+num+' <span class="sr-only">(current)</span></a></li>'));
-            }else{
-                $('.pagination').append($('<li><a onclick="initData('+num+')">'+num+'</a></li>'));
+            if (num == result.pageNum) {
+                $('.pagination').append($('<li class="active"><a href="#">' + num + ' <span class="sr-only">(current)</span></a></li>'));
+            } else {
+                $('.pagination').append($('<li><a onclick="initData(' + num + ')">' + num + '</a></li>'));
             }
 
         });
 
-        if(result.isLastPage){
+        if (result.isLastPage) {
             $('.pagination').append($('<li class="disabled"><a href="#">下一页</a></li>'));
-        }else{
-            $('.pagination').append($('<li><a onclick="initData('+(result.pageNum+1)+')">下一页</a></li>'));
+        } else {
+            $('.pagination').append($('<li><a onclick="initData(' + (result.pageNum + 1) + ')">下一页</a></li>'));
         }
     }
 
     //======分页查询结束=========
-    $("#queryBtn").click(function(){
+
+    $("#queryBtn").click(function () {
         var condition = $("#condition").val();
         json.condition = condition;
         initData(1);
     });
-
     //===添加 开始=====
-
-    $("#addBtn").click(function(){
+    $("#addBtn").click(function () {
         $("#addModal").modal({
-            show:true,
-            backdrop:'static',
-            keyboard:false
+            show: true,
+            backdrop: 'static',
+            keyboard: false
         });
     });
 
-
-    $("#saveBtn").click(function(){
+    $("#saveBtn").click(function () {
         var name = $("#addModal input[name='name']").val();
 
         $.ajax({
-            type:"post",
-            url:"${PATH}/role/doAdd",
-            data:{
-                name:name
+            type: "post",
+            url: "${PATH}/role/doAdd",
+            data: {
+                name: name
             },
-            beforeSend:function(){
-                return true ;
+            beforeSend: function () {
+                return true;
             },
-            success:function(result){
-                if("ok"==result){
-                    layer.msg("保存成功",{time:1000},function(){
+            success: function (result) {
+                if ("ok" == result) {
+                    layer.msg("保存成功", {time: 1000}, function () {
                         $("#addModal").modal('hide');
                         $("#addModal input[name='name']").val("");  // 将模态框中的值清除
                         initData(1); //添加后初始化第一页，倒序排序。
                     });
-                }else{
+                } else {
                     layer.msg("保存失败");
                 }
             }
         });
     });
-
     //===添加 结束=======
-
 
     //===修改 开始=======
     /*
@@ -305,17 +305,17 @@
         alert("update");
     });
      */
-    $('tbody').on('click','.updateClass',function(){
+    $('tbody').on('click', '.updateClass', function () {
         //var roleId = this.roleId ;// this DOM对象， dom对象不能获取自定义属性。
         var roleId = $(this).attr("roleId");
 
-        $.get("${PATH}/role/getRoleById",{id:roleId},function(result){
+        $.get("${PATH}/role/getRoleById", {id: roleId}, function (result) {
             console.log(result);
 
             $("#updateModal").modal({
-                show:true,
-                backdrop:'static',
-                keyboard:false
+                show: true,
+                backdrop: 'static',
+                keyboard: false
             });
 
             $("#updateModal input[name='name']").val(result.name);
@@ -323,59 +323,50 @@
         });
 
 
-
     });
 
-
-    $("#updateBtn").click(function(){
+    $("#updateBtn").click(function () {
         var name = $("#updateModal input[name='name']").val();
         var id = $("#updateModal input[name='id']").val();
 
-        $.post("${PATH}/role/doUpdate",{id:id,name:name},function(result){
-            if("ok"==result){
-                layer.msg("修改成功",{time:1000},function(){
+        $.post("${PATH}/role/doUpdate", {id: id, name: name}, function (result) {
+            if ("ok" == result) {
+                layer.msg("修改成功", {time: 1000}, function () {
                     $("#updateModal").modal('hide');
                     initData(json.pageNum); //初始化当前页
                 });
-            }else{
+            } else {
                 layer.msg("修改失败");
             }
         });
     });
 
+    //===修改 结束=======
 
-    //===修改 结束==============================================================
-
-
-
-    //===删除 开始==============================================================
-    $("tbody").on('click','.deleteClass',function(){
+    //===删除 开始=======
+    $("tbody").on('click', '.deleteClass', function () {
         var id = $(this).attr("roleId");
 
-        layer.confirm("您确定要删除吗？",{btn:['确定','取消']},function(index){
-
-            $.post("${PATH}/role/doDelete",{id:id},function(result){
-                if("ok"==result){
-                    layer.msg("删除成功",{time:1000},function(){
+        layer.confirm("您确定要删除吗？", {
+            btn: ['确定', '取消']},
+            function (index) {
+            $.post("${PATH}/role/doDelete", {id: id}, function (result) {
+                if ("ok" == result) {
+                    layer.msg("删除成功", {time: 1000}, function () {
                         initData(json.pageNum); //初始化当前页
                     });
-                }else{
+                } else {
                     layer.msg("删除失败");
                 }
             });
 
             layer.close(index);
-        },function(index){
+        }, function (index) {
             layer.close(index);
         });
 
     });
-
-    //===删除 结束==============================================================
-
-
-
-
+    //===删除 结束======
 
 </script>
 </body>

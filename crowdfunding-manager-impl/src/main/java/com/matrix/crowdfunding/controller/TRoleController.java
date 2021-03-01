@@ -34,6 +34,26 @@ public class TRoleController {
         return "ok";  // 拼前缀和后缀
     }
 
+    @ResponseBody
+    @RequestMapping("/role/doUpdate")  // 路径和数据库中的是一样的
+    public String doUpdatedd(TRole role) {
+        roleService.updateTRole(role);
+        return "ok";  // 拼前缀和后缀
+    }
+
+    @ResponseBody
+    @RequestMapping("/role/doDelete")  // 路径和数据库中的是一样的
+    public String doDelete(Integer id) {
+        roleService.deleteTRole(id);
+        return "ok";  // 拼前缀和后缀
+    }
+
+    @ResponseBody
+    @RequestMapping("/role/getRoleById")  // 路径和数据库中的是一样的
+    public TRole getRoleById(Integer id) {
+        return roleService.getRoleById(id);
+    }
+
     /**
      * @ResponseBody 注解 -> 启用了消息转换器
      * 1. 如果返回结果为对象（Entity Class,List,Map..）类型：启用这个转换器->MappingJackson2HttpMessageConverter
