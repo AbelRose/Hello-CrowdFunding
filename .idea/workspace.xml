@@ -14,6 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405c9bbe-0a78-4b45-9d3b-a39c12065970" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f91cea4aa62bd6af67c6b759234cef6e6293786" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f91cea4aa62bd6af67c6b759234cef6e6293786" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -627,7 +629,8 @@
       <workItem from="1614612699166" duration="22000" />
       <workItem from="1614780152420" duration="583000" />
       <workItem from="1614866878420" duration="4500000" />
-      <workItem from="1616311220999" duration="4534000" />
+      <workItem from="1616311220999" duration="5389000" />
+      <workItem from="1616323798580" duration="111000" />
     </task>
     <task id="LOCAL-00001" summary="20200125">
       <created>1611673730161</created>
@@ -869,6 +872,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="20200125" />
