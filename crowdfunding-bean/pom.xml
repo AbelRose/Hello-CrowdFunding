@@ -6,6 +6,18 @@
 
     <artifactId>crowdfunding-bean</artifactId>
     <description>存放所有模块的实体类(jar)</description>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <parent>
         <groupId>com.matrix.crowdfunding</groupId>

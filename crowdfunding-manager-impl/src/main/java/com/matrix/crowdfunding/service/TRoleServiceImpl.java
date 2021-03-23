@@ -3,6 +3,7 @@ package com.matrix.crowdfunding.service;
 import com.github.pagehelper.PageInfo;
 import com.matrix.crowdfunding.bean.TRole;
 import com.matrix.crowdfunding.bean.TRoleExample;
+import com.matrix.crowdfunding.mapper.TAdminRoleMapper;
 import com.matrix.crowdfunding.mapper.TRoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,8 @@ public class TRoleServiceImpl implements TRoleService {
     @Autowired
     private TRoleMapper roleMapper;
 
+    @Autowired
+    private TAdminRoleMapper adminRoleMapper;
 
     @Override
     public PageInfo<TRole> listRolePage(HashMap<String, Object> paramMap) {
@@ -58,5 +61,15 @@ public class TRoleServiceImpl implements TRoleService {
     @Override
     public void deleteTRole(Integer id) {
         roleMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public List<TRole> listAllRole() {
+        return roleMapper.selectByExample(null);
+    }
+
+    @Override
+    public List<Integer> getRoleIdByAdminId(String id) {
+        return adminRoleMapper.getRoleIdByAdminId(id);
     }
 }

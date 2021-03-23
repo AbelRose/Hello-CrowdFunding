@@ -27,4 +27,6 @@ public interface TAdminRoleMapper {
     int updateByPrimaryKeySelective(TAdminRole record);
 
     int updateByPrimaryKey(TAdminRole record);
+
+    List<Integer> getRoleIdByAdminId(String id);
 }

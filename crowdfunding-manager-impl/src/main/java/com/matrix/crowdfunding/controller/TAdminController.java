@@ -3,7 +3,9 @@ package com.matrix.crowdfunding.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.matrix.crowdfunding.bean.TAdmin;
+import com.matrix.crowdfunding.bean.TRole;
 import com.matrix.crowdfunding.service.TAdminService;
+import com.matrix.crowdfunding.service.TRoleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,9 @@ public class TAdminController {
 
     @Autowired
     TAdminService adminService;
+
+    @Autowired
+    TRoleService roleService;
 
     Logger log = LoggerFactory.getLogger(TAdminController.class);
 
@@ -94,5 +99,33 @@ public class TAdminController {
         }
         adminService.deleteBatch(idList);
         return "redirect:/admin/index?pageNum=" + pageNum;
+    }
+
+    @RequestMapping("/admin/toAssign")
+    public String toAssign(String id, Model model) {
+
+        //1. 查询所有角色
+        List<TRole> allList = roleService.listAllRole();
+
+        //2. 根据用户id查询已经拥有的角色
+        List<Integer> roleIdList = roleService.getRoleIdByAdminId(id);
+
+        //3. 将所有角色 进行划分
+        List<TRole> assignList = new ArrayList<>();
+        List<TRole> unAssignList = new ArrayList<>();
+
+        model.addAttribute("assignList", assignList);
+        model.addAttribute("unAssignList", unAssignList);
+
+        for (TRole role : allList) {
+            if (roleIdList.contains(role.getId())) {
+                //4. 已分配
+                assignList.add(role);
+            }else {
+                //5. 未分配
+                unAssignList.add(role);
+            }
+        }
+        return "admin/assignRole";
     }
 }

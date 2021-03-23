@@ -14,11 +14,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="crowdfunding-bean" target="1.5" />
+      <module name="crowdfunding-bean" target="7" />
       <module name="crowdfunding-common" target="1.5" />
       <module name="crowdfunding-main" target="1.7" />
       <module name="crowdfunding-manager-api" target="1.5" />
-      <module name="crowdfunding-manager-impl" target="1.5" />
+      <module name="crowdfunding-manager-impl" target="7" />
       <module name="crowdfunding-parent" target="1.5" />
     </bytecodeTargetLevel>
   </component>

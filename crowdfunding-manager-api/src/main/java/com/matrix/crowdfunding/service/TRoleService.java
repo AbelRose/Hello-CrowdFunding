@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.matrix.crowdfunding.bean.TRole;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @Author yihaosun
@@ -19,4 +20,8 @@ public interface TRoleService {
     void updateTRole(TRole role);
 
     void deleteTRole(Integer id);
+
+    List<TRole> listAllRole();
+
+    List<Integer> getRoleIdByAdminId(String id);
 }
