@@ -184,4 +184,11 @@
       roleid = #{roleid,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+<!--  void saveAdminAndRoleRelationship(@Param("roleIds") Integer[] roleId, @Param("adminId") Integer adminId);-->
+  <insert id="saveAdminAndRoleRelationship">
+    insert into t_admin_role(adminId, roleid) values
+    <foreach collection="roleIds" item="roleId" separator=",">
+        (#{adminId}, #{roleId})
+    </foreach>
+  </insert>
 </mapper>

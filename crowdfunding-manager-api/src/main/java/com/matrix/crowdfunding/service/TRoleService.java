@@ -24,4 +24,6 @@ public interface TRoleService {
     List<TRole> listAllRole();
 
     List<Integer> getRoleIdByAdminId(String id);
+
+    void saveAdminAndRoleRelationship(Integer[] roleId, Integer adminId);
 }
