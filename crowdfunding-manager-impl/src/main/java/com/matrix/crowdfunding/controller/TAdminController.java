@@ -140,4 +140,15 @@ public class TAdminController {
         roleService.saveAdminAndRoleRelationship(roleId, adminId);
         return "ok";
     }
+
+    @ResponseBody
+    @RequestMapping("/admin/doUnAssign")
+    public String doUnAssign(Integer[] roleId, Integer adminId) {
+        log.debug("adminId={}", adminId);
+        for (Integer rId : roleId) {
+            log.debug("roleId={}", rId);
+        }
+        roleService.deleteAdminAndRoleRelationship(roleId, adminId);
+        return "ok";
+    }
 }

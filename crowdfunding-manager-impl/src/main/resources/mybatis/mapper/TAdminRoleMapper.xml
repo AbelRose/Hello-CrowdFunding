@@ -191,4 +191,12 @@
         (#{adminId}, #{roleId})
     </foreach>
   </insert>
+
+<!--  void deleteAdminAndRoleRelationship(@Param("roleIds") Integer[] roleId, @Param("adminId") Integer adminId);-->
+  <delete id="deleteAdminAndRoleRelationship">
+    delete from t_admin_role where admin =#{adminId} and  roleId in 
+    <foreach collection="roleIds" item="roleId" open="(" close=")" separator=",">
+      #{roleId}
+    </foreach>
+  </delete>
 </mapper>

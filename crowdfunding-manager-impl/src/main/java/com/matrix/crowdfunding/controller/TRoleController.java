@@ -4,6 +4,9 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.matrix.crowdfunding.bean.TRole;
 import com.matrix.crowdfunding.service.TRoleService;
+import com.matrix.crowdfunding.util.Datas;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +24,8 @@ public class TRoleController {
 
     @Autowired
     private TRoleService roleService;
+
+    Logger log  = LoggerFactory.getLogger(TRoleController.class);
 
     @RequestMapping("/role/index")  // 路径和数据库中的是一样的
     public String index() {
@@ -42,11 +47,14 @@ public class TRoleController {
     }
 
     @ResponseBody
-    @RequestMapping("/role/doDelete")  // 路径和数据库中的是一样的
-    public String doDelete(Integer id) {
-        roleService.deleteTRole(id);
-        return "ok";  // 拼前缀和后缀
+    @RequestMapping("/role/doAssignPermissionToRole")  // 路径和数据库中的是一样的
+    public String doAssignPermissionToRole(Integer roleId, Datas ds) {
+        log.debug("roleId = {}", roleId);
+        log.debug("permissionIds = {}", ds.getIds());
+        return "ok";
     }
+
+
 
     @ResponseBody
     @RequestMapping("/role/getRoleById")  // 路径和数据库中的是一样的
