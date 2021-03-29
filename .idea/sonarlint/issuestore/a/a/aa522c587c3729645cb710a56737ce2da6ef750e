@@ -1,0 +1,17 @@
+
+cWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ
+Z	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ
+CWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(Õ¶¯M
+CWeb:BoldAndItalicTagsCheck&"Replace this <i> tag by <em>.(¾ı 
+HWeb:BoldAndItalicTagsCheck1"Replace this <i> tag by <em>.(¨¿ÀÑúÿÿÿÿ
+HWeb:BoldAndItalicTagsCheck5"Replace this <i> tag by <em>.(¡Ã¢‹ıÿÿÿÿ
+HWeb:BoldAndItalicTagsCheck8"Replace this <i> tag by <em>.(¥Úàüûÿÿÿÿ
+MWeb:TableWithoutCaptionCheck>" Add a description to this table.(Ó÷®Œûÿÿÿÿ
+C	Web:S1827A")Remove this deprecated "width" attribute.(Î¤¹ùÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheckA";Add either an 'id' or a 'scope' attribute to this <th> tag.(Î¤¹ùÿÿÿÿ
+C	Web:S1827B")Remove this deprecated "width" attribute.(Î½èûÿÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheckB";Add either an 'id' or a 'scope' attribute to this <th> tag.(Î½èûÿÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheckC";Add either an 'id' or a 'scope' attribute to this <th> tag.( °—ãùÿÿÿÿ
+>	Web:S1827D")Remove this deprecated "width" attribute.(˜Ãˆ
+g Web:TableHeaderHasIdOrScopeCheckD";Add either an 'id' or a 'scope' attribute to this <th> tag.(˜Ãˆ
+>	Web:S1827M")Remove this deprecated "align" attribute.(˜ü‰Õ
