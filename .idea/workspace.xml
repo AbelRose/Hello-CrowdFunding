@@ -14,49 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405c9bbe-0a78-4b45-9d3b-a39c12065970" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_4_2_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_2_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_2_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_4_2_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_2_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_21_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_21_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_21_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/01fab9935b29a17a9c69d8be2e18c114fc460954" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/053402e09035f5ae5d3bf2507b310166fe21671c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d6dbd3862a6a3c920444b2bc701b517dc6e80f7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b8a6daacadfe30d767da757f1c2d872f97f7890" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7dd2d25119a7d2414c560a1ccbf5b7cf59c6d661" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/92fe7ca12ca260ac1bda2179d7d5fe53db76a226" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97045c9680653ec9b7fad58c4341f1e40199550a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa522c587c3729645cb710a56737ce2da6ef750e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b54701a7ab07babcee00f322dbd11258b6928781" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/bef55a2499876e0c31dac7f999efb40c85cc5274" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa9bb6a2e997634da9b378dcc27219cd6d0db416" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/component/SecurityUserDetailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/config/CrowdFundingSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/crowdfunding_main_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/crowdfunding_main_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/5461ab8cb9fa50bdcd592db5a006df957cf1688a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/5461ab8cb9fa50bdcd592db5a006df957cf1688a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b309cdf174ad0ff161a851737ac84c63188c0e1a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b309cdf174ad0ff161a851737ac84c63188c0e1a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba6a90c11cdf82ce00431b6a79c654252302c8f5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba6a90c11cdf82ce00431b6a79c654252302c8f5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-bean/crowdfunding-bean.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-bean/crowdfunding-bean.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-common/crowdfunding-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-common/crowdfunding-common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-main/crowdfunding-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/crowdfunding-main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/java/com/matrix/crowdfunding/controller/DispatcherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/java/com/matrix/crowdfunding/controller/DispatcherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/crowdfunding-manager-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/crowdfunding-manager-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/crowdfunding-manager-impl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/crowdfunding-manager-impl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-parent/crowdfunding-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-parent/crowdfunding-parent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowdfunding-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/component/SecurityUserDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/component/SecurityUserDetailServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -539,19 +499,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 8.5.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -697,7 +644,8 @@
       <workItem from="1616419727795" duration="5682000" />
       <workItem from="1616510335840" duration="5732000" />
       <workItem from="1617028119202" duration="1682000" />
-      <workItem from="1617031436910" duration="1609000" />
+      <workItem from="1617031436910" duration="2126000" />
+      <workItem from="1617113267129" duration="1185000" />
     </task>
     <task id="LOCAL-00001" summary="20200125">
       <created>1611673730161</created>
