@@ -6,6 +6,7 @@ import com.matrix.crowdfunding.bean.TRoleExample;
 import com.matrix.crowdfunding.mapper.TAdminRoleMapper;
 import com.matrix.crowdfunding.mapper.TRoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -43,6 +44,7 @@ public class TRoleServiceImpl implements TRoleService {
         return page;
     }
 
+//    @PreAuthorize("hasRole('PM - 项目经理')")  // 细粒度  只有项目经理这个角色能够访问 至于是谁无所谓  需要被Spring容器所管理
     @Override
     public void saveTRole(TRole role) {
         roleMapper.insertSelective(role);

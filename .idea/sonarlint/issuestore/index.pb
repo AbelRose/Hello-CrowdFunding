@@ -53,3 +53,11 @@ fcrowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/config/CrowdFun
 \crowdfunding-main/src/main/java/com/matrix/crowdfunding/controller/DispatcherController.java,9/7/97045c9680653ec9b7fad58c4341f1e40199550a
 g
 7crowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp,0/5/053402e09035f5ae5d3bf2507b310166fe21671c
+Œ
+\crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/mapper/TPermissionMapper.java,3/f/3fd3b662a9e83b9f6b18b62440ed03f0f2a0dbde
+œ
+lcrowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/component/SecurityUserDetailServiceImpl.java,5/4/549f7b7127fdd0e3fb771336b32a3df34e297661
+g
+7crowdfunding-main/src/main/webapp/WEB-INF/jsp/index.jsp,9/4/947cb87fd3b5c79823fee2c8bc69dea13181dddd
+l
+<crowdfunding-main/src/main/webapp/WEB-INF/jsp/common/top.jsp,1/6/16cf007ebb09e3a1ee5df00745fe2f07c4e4c8a4

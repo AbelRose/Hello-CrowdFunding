@@ -26,12 +26,12 @@
 
 <div class="container">
 
-    <form id="loginForm" class="form-signin" role="form" action="doLogin" method="post">  <!-- action="doLogin" 请求DispatcherController中的doLogin方法 -->
+    <form id="loginForm" class="form-signin" role="form" action="${PATH}/login" method="post">  <!-- action="doLogin" 请求DispatcherController中的doLogin方法 -->
         <h2 class="form-signin-heading"><i class="glyphicon glyphicon-log-in"></i> 用户登录</h2>
         <!-- 登陆的信息显示出来 -->
-        <c:if test="${not empty message}"> <!-- 请求域中若不为空 取出来 -->
+        <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}"> <!-- 请求域中若不为空 取出来 -->
             <div class="form-group has-success has-feedback">
-                ${message}
+                    ${SPRING_SECURITY_LAST_EXCEPTION.message}
             </div>
         </c:if>
         <div class="form-group has-success has-feedback"> <%-- value="${param.loginacct}" --%>

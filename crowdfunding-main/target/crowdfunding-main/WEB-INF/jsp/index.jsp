@@ -227,7 +227,7 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse" style="float:right;">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="login">登录</a></li>
+                        <li><a href="${PATH}/toLogin">登录</a></li>
                         <li><a href="reg.html">注册</a></li>
                     </ul>
                 </div>

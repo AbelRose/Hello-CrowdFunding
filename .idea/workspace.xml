@@ -14,9 +14,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405c9bbe-0a78-4b45-9d3b-a39c12065970" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/component/TSecurityAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/053402e09035f5ae5d3bf2507b310166fe21671c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/053402e09035f5ae5d3bf2507b310166fe21671c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/92fe7ca12ca260ac1bda2179d7d5fe53db76a226" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/92fe7ca12ca260ac1bda2179d7d5fe53db76a226" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97045c9680653ec9b7fad58c4341f1e40199550a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97045c9680653ec9b7fad58c4341f1e40199550a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-common/target/classes/com/matrix/crowdfunding/util/Datas.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-common/target/classes/com/matrix/crowdfunding/util/Datas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/java/com/matrix/crowdfunding/controller/DispatcherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/java/com/matrix/crowdfunding/controller/DispatcherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/common/top.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/common/top.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/classes/com/matrix/crowdfunding/controller/DispatcherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/classes/com/matrix/crowdfunding/controller/DispatcherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/classes/com/matrix/crowdfunding/controller/DispatcherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/classes/com/matrix/crowdfunding/controller/DispatcherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/jsp/role/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/jsp/role/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-bean-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-bean-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-manager-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-manager-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-manager-impl-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/lib/crowdfunding-manager-impl-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-main/target/crowdfunding-main/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/mapper/TPermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/mapper/TPermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/mapper/TRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/src/main/java/com/matrix/crowdfunding/mapper/TRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/mapper/TAdminRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/mapper/TAdminRoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/mapper/TPermissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/mapper/TPermissionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/mapper/TRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/mapper/TRoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/service/TRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-api/target/classes/com/matrix/crowdfunding/service/TRoleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/component/SecurityUserDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/component/SecurityUserDetailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/controller/TRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/java/com/matrix/crowdfunding/service/TRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/resources/mybatis/mapper/TPermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/resources/mybatis/mapper/TPermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/resources/mybatis/mapper/TRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/src/main/resources/mybatis/mapper/TRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/com/matrix/crowdfunding/controller/TAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/com/matrix/crowdfunding/controller/TAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/com/matrix/crowdfunding/controller/TRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/com/matrix/crowdfunding/controller/TRoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/com/matrix/crowdfunding/service/TRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/com/matrix/crowdfunding/service/TRoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/mybatis/mapper/TAdminRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/mybatis/mapper/TAdminRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/mybatis/mapper/TPermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/mybatis/mapper/TPermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/mybatis/mapper/TRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowdfunding-manager-impl/target/classes/mybatis/mapper/TRoleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -499,6 +534,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -509,7 +557,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Hello-CrowdFunding_2" />
+        <option name="BASE_DIRECTORY_NAME" value="105e4da8-70ce-4e50-9b0b-a84d52a16759" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -645,7 +693,8 @@
       <workItem from="1616510335840" duration="5732000" />
       <workItem from="1617028119202" duration="1682000" />
       <workItem from="1617031436910" duration="2126000" />
-      <workItem from="1617113267129" duration="1185000" />
+      <workItem from="1617113267129" duration="4488000" />
+      <workItem from="1617201248947" duration="1636000" />
     </task>
     <task id="LOCAL-00001" summary="20200125">
       <created>1611673730161</created>

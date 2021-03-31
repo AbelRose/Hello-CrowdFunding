@@ -38,7 +38,7 @@ public class DispatcherController {
         return "index";
     }
 
-    @RequestMapping("/login")
+    @RequestMapping("/toLogin")
     public String login() {
         log.debug("跳转到登录的主页面...");
         return "login";
@@ -50,7 +50,7 @@ public class DispatcherController {
 
         // 如果没有session 那么要去重新登陆
         if (session == null) {
-            return "redirect:/login";
+            return "redirect:/toLogin";
         }
         // 存放父菜单
         // 优化 -> 不必每次都从数据库中查找 如果session域中有的话直接从session域中拿数据

@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -9,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <%@ include file="/WEB-INF/jsp/common/css.jsp" %>
+    <%@include file="/WEB-INF/jsp/common/css.jsp" %> <!-- 静态包含: 生成一个class  适合不总变的情况-->
     <style>
         .tree li {
             list-style-type: none;
@@ -29,15 +27,15 @@
 
 <body>
 
-<jsp:include page="/WEB-INF/jsp/common/top.jsp"></jsp:include>
+<%@include file="/WEB-INF/jsp/common/top.jsp" %> <!-- 静态包含: 生成一个class  适合不总变的情况-->
 
 <div class="container-fluid">
     <div class="row">
-        <jsp:include page="/WEB-INF/jsp/common/sidebar.jsp"></jsp:include>
+        <%@include file="/WEB-INF/jsp/common/sidebar.jsp" %> <!-- 静态包含: 生成一个class  适合不总变的情况-->
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表</h3>
+                    <h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表 </h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-inline" role="form" style="float:left;">
@@ -55,12 +53,9 @@
                     <button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i
                             class=" glyphicon glyphicon-remove"></i> 删除
                     </button>
-
-                    <security:authorize access="hasRole('PM - 项目经理')">
-                        <button id="addBtn" type="button" class="btn btn-primary" style="float:right;"><i
-                                class="glyphicon glyphicon-plus"></i> 新增
-                        </button>
-                    </security:authorize>
+                    <button id="addBtn" type="button" class="btn btn-primary" style="float:right;"><i
+                            class="glyphicon glyphicon-plus"></i> 新增
+                    </button>
                     <br>
                     <hr style="clear:both;">
                     <div class="table-responsive">
@@ -74,12 +69,21 @@
                             </tr>
                             </thead>
                             <tbody>
-
+                            <%--                            同步请求--%>
+                            <%--                                数据正在加载中...--%>
                             </tbody>
                             <tfoot>
                             <tr>
                                 <td colspan="6" align="center">
-                                    <ul class="pagination"></ul>
+                                    <ul class="pagination">
+                                        <li class="disabled"><a href="#">上一页</a></li>
+                                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">下一页</a></li>
+                                    </ul>
                                 </td>
                             </tr>
 
@@ -142,30 +146,11 @@
 </div>
 
 
-<!-- 修改数据 模态框 -->
-<div class="modal fade" id="assignModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">给角色分配权限</h4>
-            </div>
-            <div class="modal-body">
-                <ul id="treeDemo" class="ztree"></ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button id="assignBtn" type="button" class="btn btn-primary">分配</button>
-            </div>
-        </div>
-    </div>
-</div>
+<%@include file="/WEB-INF/jsp/common/js.jsp" %> <!-- 静态包含: 生成一个class  适合不总变的情况-->
 
-
-<%@ include file="/WEB-INF/jsp/common/js.jsp" %>
 <script type="text/javascript">
-    $(function () { //页面加载完成需要执行事件处理
+    $(function () {
+        // 页面加载完事件的处理
         $(".list-group-item").click(function () {
             if ($(this).find("ul")) {
                 $(this).toggleClass("tree-closed");
@@ -176,49 +161,44 @@
                 }
             }
         });
-
-
-        initData(1);
+        initData(1);  // 将第一页的数据进行初始化
     });
 
-
-    //======分页查询 开始================================================================
     var json = {
         pageNum: 1,
         pageSize: 2
     };
 
     function initData(pageNum) {
-
-        //1.发起ajax请求，获取分页数据
+        //1. 发起ajax请求 获取分页数据
 
         json.pageNum = pageNum;
 
         var index = -1;
 
-        $.ajax({
-            type: 'post',
-            url: "${PATH}/role/loadData",
-            data: json,
-            beforeSend: function () {
-                index = layer.load(0, {time: 10 * 1000});
-                return true;
-            },
-            success: function (result) {
+        $.ajax(
+            {
+                type: 'post',
+                url: "${PATH}/role/loadData",
+                data: json,
+                beforeSend: function () {
+                    // 进行表单数据校验
+                    index = layer.load(0, {time: 10 * 1000});
+                    return true;
+                },
+                success: function (result) {
+                    console.log(result); // result就是PageInfo
+                    layer.close(index);
 
-                console.log(result);
-                layer.close(index);
-
-                initShow(result);
-
-                initNavg(result);
+                    initShow(result);  // 声明到函数外部
+                    initNavg(result);  // 声明到函数外部
+                }
             }
-        });
-
+        );
     }
 
 
-    //2.展示数据
+    //2. 展示数据
     function initShow(result) {
         console.log(result);
 
@@ -234,9 +214,9 @@
             tr.append('<td>' + e.name + '</td>');
 
             var td = $('<td></td>');
-            td.append('<button type="button" roleId="' + e.id + '" class="assignPermissionClass btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>');
-            td.append(' <button type="button" roleId="' + e.id + '" class="updateClass btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>');
-            td.append(' <button type="button" roleId="' + e.id + '" class="deleteClass btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>');
+            td.append('<button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>');
+            td.append('<button type="button" roleId="' + e.id + '" class="updateClass btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>');
+            td.append('<button type="button" roleId="' + e.id + '" class="deleteClass btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>');
 
             tr.append(td);
 
@@ -244,7 +224,7 @@
         });
     }
 
-    //3.展示分页条
+    //3. 展示分页条
     function initNavg(result) {
         console.log(result);
 
@@ -274,21 +254,16 @@
         } else {
             $('.pagination').append($('<li><a onclick="initData(' + (result.pageNum + 1) + ')">下一页</a></li>'));
         }
-
     }
 
-    //======分页查询 结束================================================================
+    //======分页查询结束=========
 
     $("#queryBtn").click(function () {
         var condition = $("#condition").val();
-
         json.condition = condition;
-
         initData(1);
     });
-
-    //===添加 开始==============================================================
-
+    //===添加 开始=====
     $("#addBtn").click(function () {
         $("#addModal").modal({
             show: true,
@@ -296,7 +271,6 @@
             keyboard: false
         });
     });
-
 
     $("#saveBtn").click(function () {
         var name = $("#addModal input[name='name']").val();
@@ -314,22 +288,18 @@
                 if ("ok" == result) {
                     layer.msg("保存成功", {time: 1000}, function () {
                         $("#addModal").modal('hide');
-                        $("#addModal input[name='name']").val("");
+                        $("#addModal input[name='name']").val("");  // 将模态框中的值清除
                         initData(1); //添加后初始化第一页，倒序排序。
                     });
-                } else if ("403" == result) {
-                    layer.msg("您无权访问该功能!");
                 } else {
                     layer.msg("保存失败");
                 }
             }
         });
-
     });
+    //===添加 结束=======
 
-    //===添加 结束==============================================================
-
-    //===修改 开始==============================================================
+    //===修改 开始=======
     /*
     $(".updateClass").click(function(){
         alert("update");
@@ -351,6 +321,8 @@
             $("#updateModal input[name='name']").val(result.name);
             $("#updateModal input[name='id']").val(result.id);
         });
+
+
     });
 
     $("#updateBtn").click(function () {
@@ -369,14 +341,15 @@
         });
     });
 
-    //===修改 结束==============================================================
+    //===修改 结束=======
 
-    //===删除 开始==============================================================
+    //===删除 开始=======
     $("tbody").on('click', '.deleteClass', function () {
         var id = $(this).attr("roleId");
 
-        layer.confirm("您确定要删除吗？", {btn: ['确定', '取消']}, function (index) {
-
+        layer.confirm("您确定要删除吗？", {
+            btn: ['确定', '取消']},
+            function (index) {
             $.post("${PATH}/role/doDelete", {id: id}, function (result) {
                 if ("ok" == result) {
                     layer.msg("删除成功", {time: 1000}, function () {
@@ -391,112 +364,11 @@
         }, function (index) {
             layer.close(index);
         });
-    });
-
-    //===删除 结束==============================================================
-
-    //===给角色分配权限 开始==============================================================
-    var roleId = '';
-
-    $("tbody").on("click", ".assignPermissionClass", function () {
-        $("#assignModal").modal({
-            show: true,
-            backdrop: 'static',
-            keyboard: false
-        });
-
-        roleId = $(this).attr("roleId");
-
-        initTree();
 
     });
-
-    function initTree() {
-
-        var setting = {
-            check: {
-                enable: true
-            },
-            data: {
-                simpleData: {
-                    enable: true,
-                    pIdKey: "pid"
-                },
-                key: {
-                    url: "xxx",
-                    name: "title"
-                }
-            },
-            view: {
-                addDiyDom: function (treeId, treeNode) {
-                    $("#" + treeNode.tId + "_ico").removeClass();
-                    $("#" + treeNode.tId + "_span").before('<span class="' + treeNode.icon + '"></span>');
-                }
-            }
-
-        };
-
-        //多个异步请求，执行先后顺序问题。
-
-        //1.加载数据
-        $.get("${PATH}/permission/listAllPermissionTree", function (data) {
-            //data.push({"id":0,"title":"系统权限","icon":"glyphicon glyphicon-asterisk"});
-
-            var treeObj = $.fn.zTree.init($("#treeDemo"), setting, data);
-            //var treeObj = $.fn.zTree.getZTreeObj("treeDemo");
-            treeObj.expandAll(true);
-
-            //2.回显已分配许可
-            $.get("${PATH}/role/listPermissionIdByRoleId", {roleId: roleId}, function (data) {
-                $.each(data, function (i, e) {
-                    var permissionId = e;
-                    var treeObj = $.fn.zTree.getZTreeObj("treeDemo");
-                    var node = treeObj.getNodeByParam("id", permissionId, null);
-                    treeObj.checkNode(node, true, false, false);
-                });
-            });
-        });
-    }
-
-    $("#assignBtn").click(function () {
-
-        var json = {
-            roleId: roleId
-        };
-        console.log(roleId);
-        var treeObj = $.fn.zTree.getZTreeObj("treeDemo");
-        var nodes = treeObj.getCheckedNodes(true);
-        $.each(nodes, function (i, e) {
-            var permissionId = e.id;
-            console.log(permissionId);
-
-            json['ids[' + i + ']'] = permissionId;
-
-            //多条数据提交和接收
-            //json['userList[i].name'] = 'xxx';
-            //json['userList[i].age'] = 23;
-        });
-
-        $.ajax({
-            type: "post",
-            url: "${PATH}/role/doAssignPermissionToRole",
-            data: json,
-            success: function (result) {
-                if ("ok" == result) {
-                    layer.msg("分配成功", {time: 1000}, function () {
-                        $("#assignModal").modal('hide');
-                    });
-                } else {
-                    layer.msg("分配失败");
-                }
-            }
-        });
-
-    });
-
-    //===给角色分配权限 结束==============================================================
+    //===删除 结束======
 
 </script>
 </body>
 </html>
-    
+
